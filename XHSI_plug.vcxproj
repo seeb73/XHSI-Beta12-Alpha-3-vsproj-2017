@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{1FFDA87C-6F08-455C-8658-291681492E40}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>XHSI</TargetName>
+    <TargetExt>.xpl</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>win</TargetName>
+    <TargetExt>.xpl</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;XHSI_PLUG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;XHSI_PLUG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Sebastian\Documents\Sources\XHSI-r398\XHSI_plugin64\SDK\CHeaders\Wrappers;C:\Users\Sebastian\Documents\Sources\XHSI-r398\XHSI_plugin64\SDK\CHeaders\Widgets;C:\Users\Sebastian\Documents\Sources\XHSI-r398\XHSI_plugin64\SDK\CHeaders\XPLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <SDLCheck>true</SDLCheck>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;IBM=1;XPLM200=1;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <UseFullPaths>false</UseFullPaths>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Opengl32.lib;odbc32.lib;odbccp32.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="xhsi_plugin64\commands.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_cl30.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_ff_a320.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_jar_a320neo.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_pa_a320.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_pilotedge.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_qpac.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_ufmc.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_x737.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_xjoymap.c" />
+    <ClCompile Include="xhsi_plugin64\datarefs_x_raas.c" />
+    <ClCompile Include="xhsi_plugin64\endianess.c" />
+    <ClCompile Include="xhsi_plugin64\jar_a320neo_msg.c" />
+    <ClCompile Include="xhsi_plugin64\net.c" />
+    <ClCompile Include="xhsi_plugin64\packets.c" />
+    <ClCompile Include="xhsi_plugin64\plugin.c" />
+    <ClCompile Include="xhsi_plugin64\pluginWin.cpp" />
+    <ClCompile Include="xhsi_plugin64\qpac_msg.c" />
+    <ClCompile Include="xhsi_plugin64\receiver.c" />
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCBroadcaster.cpp" />
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCDisplay.cpp" />
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCListener.cpp" />
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCProcessing.cpp" />
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCWidget.cpp" />
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCWidgetAttachments.cpp" />
+    <ClCompile Include="xhsi_plugin64\sender.c" />
+    <ClCompile Include="xhsi_plugin64\settings.c" />
+    <ClCompile Include="xhsi_plugin64\ufmc.c" />
+    <ClCompile Include="xhsi_plugin64\ui.c" />
+    <ClCompile Include="xhsi_plugin64\xfmc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xhsi_plugin64\commands.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_cl30.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_ff_a320.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_jar_a320neo.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_pa_a320.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_pilotedge.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_qpac.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_ufmc.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_x737.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_xjoymap.h" />
+    <ClInclude Include="xhsi_plugin64\datarefs_x_raas.h" />
+    <ClInclude Include="xhsi_plugin64\endianess.h" />
+    <ClInclude Include="xhsi_plugin64\globals.h" />
+    <ClInclude Include="xhsi_plugin64\ids.h" />
+    <ClInclude Include="xhsi_plugin64\jar_a320neo_msg.h" />
+    <ClInclude Include="xhsi_plugin64\net.h" />
+    <ClInclude Include="xhsi_plugin64\packets.h" />
+    <ClInclude Include="xhsi_plugin64\plugin.h" />
+    <ClInclude Include="xhsi_plugin64\qpac_msg.h" />
+    <ClInclude Include="xhsi_plugin64\receiver.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPStandardWidgets.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPUIGraphics.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPWidgetDefs.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPWidgets.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPWidgetUtils.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCBroadcaster.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCDisplay.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCListener.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCProcessing.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCWidget.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCWidgetAttachments.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMCamera.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMDataAccess.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMDefs.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMDisplay.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMGraphics.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMInstance.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMMap.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMMenus.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMNavigation.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMPlanes.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMPlugin.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMProcessing.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMScenery.h" />
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMUtilities.h" />
+    <ClInclude Include="xhsi_plugin64\sender.h" />
+    <ClInclude Include="xhsi_plugin64\settings.h" />
+    <ClInclude Include="xhsi_plugin64\structs.h" />
+    <ClInclude Include="xhsi_plugin64\ufmc.h" />
+    <ClInclude Include="xhsi_plugin64\ui.h" />
+    <ClInclude Include="xhsi_plugin64\xfmc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="XHSI_plugin64\SDK\Libraries\Win\XPLM_64.lib" />
+    <Library Include="XHSI_plugin64\SDK\Libraries\Win\XPWidgets_64.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="XHSI_plugin64\SDK\README.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

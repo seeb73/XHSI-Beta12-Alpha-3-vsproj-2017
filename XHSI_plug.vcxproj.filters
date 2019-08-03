@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xhsi_plugin64\pluginWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\commands.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_cl30.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_ff_a320.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_jar_a320neo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_pa_a320.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_pilotedge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_qpac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_ufmc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_x737.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_xjoymap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\datarefs_x_raas.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\endianess.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\jar_a320neo_msg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\net.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\packets.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\plugin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\qpac_msg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\receiver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\sender.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\settings.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\ufmc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\ui.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\xfmc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCBroadcaster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCProcessing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCWidgetAttachments.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xhsi_plugin64\commands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_cl30.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_ff_a320.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_jar_a320neo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_pa_a320.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_pilotedge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_qpac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_ufmc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_x737.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_xjoymap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\datarefs_x_raas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\endianess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\ids.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\jar_a320neo_msg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\net.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\packets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\qpac_msg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\receiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\ufmc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\ui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\xfmc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPStandardWidgets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPUIGraphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPWidgetDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPWidgets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\widgets\XPWidgetUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCBroadcaster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCProcessing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\wrappers\XPCWidgetAttachments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMCamera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMDataAccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMGraphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMMenus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMNavigation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMPlanes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMProcessing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMScenery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhsi_plugin64\sdk\cheaders\xplm\XPLMUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="XHSI_plugin64\SDK\Libraries\Win\XPLM_64.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+    <Library Include="XHSI_plugin64\SDK\Libraries\Win\XPWidgets_64.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="XHSI_plugin64\SDK\README.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
