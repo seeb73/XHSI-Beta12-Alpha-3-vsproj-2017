@@ -102,6 +102,8 @@ public class CDUComponent extends Component implements Observer, PreferencesObse
         subcomponents.add(new CDUUfmc(model_factory, cdu_gc, this));
         subcomponents.add(new CDUQpac(model_factory, cdu_gc, this));
         subcomponents.add(new CDUJarDesign(model_factory, cdu_gc, this));
+        subcomponents.add(new CDUZiboMod737(model_factory, cdu_gc, this));
+        subcomponents.add(new CDUXPlane11(model_factory, cdu_gc, this));
         subcomponents.add(new CDUDefault(model_factory, cdu_gc, this));
 
         this.repaint();
@@ -210,7 +212,8 @@ public class CDUComponent extends Component implements Observer, PreferencesObse
      */
     public void update() {
     	// TODO: repaint only if cdu_packet received or if mcdu_packet received
-    	if ( (cdu_gc.cdu_source == Avionics.CDU_SOURCE_AIRCRAFT_OR_DUMMY) && avionics.is_qpac() && qpac_mcdu_data.updated) {
+    	if ( (cdu_gc.cdu_source == Avionics.CDU_SOURCE_AIRCRAFT_OR_DUMMY) && 
+    			(avionics.is_qpac() || avionics.is_zibo_mod_737() || (this.avionics.get_fms_type() > 0)) && qpac_mcdu_data.updated) {
     		repaint();
     	} else if (cdu_gc.cdu_source == Avionics.CDU_SOURCE_XFMC && this.xfmc_data.updated) {	
     		repaint();
