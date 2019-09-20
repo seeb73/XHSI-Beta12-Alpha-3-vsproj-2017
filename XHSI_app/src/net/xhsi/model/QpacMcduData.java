@@ -4,7 +4,7 @@
 * This is the Airbus A320 Qpac MCDU data class
 * 
 * Copyright (C) 2010  Marc Rogiers (marrog.123@gmail.com)
-* Copyright (C) 2015  Nicolas Carel
+* Copyright (C) 2015-2019  Nicolas Carel
 * 
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License
@@ -36,10 +36,13 @@ public class QpacMcduData {
 	
 	private static QpacMcduData instance = null;
 	
-	public boolean updated = false;
+	static public boolean updated = false;
 	
 	static List qpacMcdu1Lines = new ArrayList();
 	static List qpacMcdu2Lines = new ArrayList();
+	
+	static int mcdu1Status;
+	static int mcdu2Status;
 	
 	public static QpacMcduData getInstance(){
 		if(instance == null){
@@ -52,13 +55,13 @@ public class QpacMcduData {
 		qpacMcdu1Lines = new ArrayList();
 		qpacMcdu2Lines = new ArrayList();
 		
-		for(int i=0; i < 15; i++){
+		for(int i=0; i < 17; i++){
 			qpacMcdu1Lines.add(new HashMap());
 			qpacMcdu2Lines.add(new HashMap());
 		}
 		
-        Map m1 = (Map) qpacMcdu1Lines.get(14);
-        Map m2 = (Map) qpacMcdu2Lines.get(14);
+        Map m1 = (Map) qpacMcdu1Lines.get(16);
+        Map m2 = (Map) qpacMcdu2Lines.get(16);
 
         m1.put("decode", 1);
         m2.put("decode", 1);
@@ -90,15 +93,27 @@ public class QpacMcduData {
 		}
 	}
 
+	public void setStatus(int mcdu_id, int status) {
+		if (mcdu_id==0) { 
+			mcdu1Status = status; 
+		} else {
+			mcdu2Status = status;
+		}
+	}
 
+	public static int getStatus(int mcdu_id) {
+		return (mcdu_id==0) ? mcdu1Status : mcdu2Status;
+	}
+	
 	/*
 	 * LINE COMPRESSION PROTOCOL FOR QPAC MESSAGES
 	 *
 	 * Compressed output format:
 	 * -------------------------
 	 * f,c,pp,”text1 “;f,c,pp,”text2”;f,c,pp,”text3”; etc etc
-	 * f : (1 char) font s=small, l=large
-	 * c : (1 char) color r=red, b=blue, m=magenta, y=yellow, g=green, a=amber, w=white
+	 * f : (1 char) font s=small, l=large, S=small underline, L=large underline
+	 * c : (1 char) color n=black, r=red, b=blue, m=magenta, y=yellow, g=green, a=amber, w=white
+	 *              N, R, B, M, Y, G, A, W are reversed video colors with black ink
 	 * pp : (2 char) column position of embedded string
 	 * text : string to be displayed
 	 *
