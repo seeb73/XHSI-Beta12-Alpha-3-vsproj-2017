@@ -959,7 +959,7 @@ float checkQpacCallback(
     }
 
     // come back in 0.1 sec
-    return 0.100000000000;
+    return 0.1;
 }
 
 void cmdQpacSDPage(int page) {
@@ -1010,8 +1010,8 @@ void writeQpacDataRef(int id, float value) {
 						XPLMCommandBegin(qpac_command[(int)value]);
 						qpac_release_command=(int)value;
 					} else {
+						qpac_mcdu_keypressed++;
 						XPLMCommandOnce(qpac_command[(int)value]);
-
 					}
 				}
 			}

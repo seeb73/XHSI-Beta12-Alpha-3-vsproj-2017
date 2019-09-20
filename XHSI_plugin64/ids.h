@@ -165,6 +165,9 @@
 #define SIM_COCKPIT_RADIOS_TRANSPONDER_CODE 181
 #define SIM_COCKPIT_RADIOS_TRANSPONDER_ID 182
 
+// FMS [ comes with X-Plane 11.35 ]
+#define SIM_FMS_KEY_PRESS 183
+#define XHSI_FMS_TYPE 184  // 0:Legacy XP10  1:XP11 737-800  2 and more: reserved
 
 // RTU
 #define XHSI_RTU_CONTACT_ATC 185 // also works for PilotEdge
@@ -881,14 +884,20 @@
 
 // IDs from 1400 - 1499 reserved
 
-// Flight Factor A320  Ultimate (1500 - 1699)
+// Flight Factor A320  Ultimate (1500 - 1799)
 #define FF_A320_STATUS 1500
 #define FF_A320_APU_MASTER 1501
 #define FF_A320_APU_STARTER 1502
 #define FF_A320_APU_BLEED 1503
 #define FF_A320_APU_GEN 1504
 
-#define FF_A320_ID_END 1699
+#define FF_A320_ID_END 1799
+
+// ID from 1800 - 1899 : Laminar Boeing 737-800 + Zibo Mod
+#define Z737_STATUS 1800
+#define Z737_KEY_PRESS 1801
+
+#define Z737_ID_END 1899
 
 
 // Plugin Version

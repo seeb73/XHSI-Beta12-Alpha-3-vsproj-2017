@@ -6,7 +6,7 @@
 *
 * Copyright (C) 2007-2009  Georg Gruetter (gruetter@gmail.com)
 * Copyright (C) 2009-2015  Marc Rogiers (marrog.123@gmail.com)
-* Copyright (C) 2014-2018  Nicolas Carel
+* Copyright (C) 2014-2019  Nicolas Carel
 * Copyright (C) 2017-2018  Technische Hochschule Ingolstadt (https://www.thi.de/en/)
 *
 * This program is free software; you can redistribute it and/or
@@ -75,6 +75,7 @@
 #include "datarefs.h"
 #include "datarefs_ufmc.h"
 #include "datarefs_x737.h"
+#include "datarefs_z737.h"
 #include "datarefs_cl30.h"
 #include "datarefs_qpac.h"
 #include "datarefs_pa_a320.h"
@@ -91,8 +92,10 @@
 #include "commands.h"
 #include "xfmc.h"
 #include "ufmc.h"
+#include "z737_fmc.h"
 #include "qpac_msg.h"
 #include "jar_a320neo_msg.h"
+#include "xp11_cdu.h"
 
 
 
@@ -262,6 +265,12 @@ PLUGIN_API int XPluginEnable(void) {
             -1.0f,
             NULL);
 
+    // Z737 Zibo Mod Boeing 737-800
+    XPLMRegisterFlightLoopCallback(
+            checkZibo737Callback,
+            -1.0f,
+            NULL);
+
     // CL30
     XPLMRegisterFlightLoopCallback(
             checkCL30Callback,
@@ -317,6 +326,12 @@ PLUGIN_API int XPluginEnable(void) {
             -1.0f,
             NULL);
 
+    // Z737 Zibo Mod Boeing 737-800 FMC
+    XPLMRegisterFlightLoopCallback(
+    		sendZibo737ExtendedFmsCallback,
+            -1.0f,
+            NULL);
+
     // QPAC Messages E/WD and MCDU
     XPLMRegisterFlightLoopCallback(
             sendQpacMsgCallback,
@@ -326,6 +341,18 @@ PLUGIN_API int XPluginEnable(void) {
     // JAR A320 NEO Messages E/WD and MCDU
     XPLMRegisterFlightLoopCallback(
             sendJar_a320MsgCallback,
+            -1.0f,
+            NULL);
+
+    // Z737 Zibo Mod Boeing 737-800 CDU
+    XPLMRegisterFlightLoopCallback(
+            sendZibo737MsgCallback,
+            -1.0f,
+            NULL);
+
+    // X-Plane 11.35 CDU
+    XPLMRegisterFlightLoopCallback(
+    		sendXP11CduMsgCallback,
             -1.0f,
             NULL);
 
@@ -385,6 +412,7 @@ PLUGIN_API void XPluginDisable(void) {
     XPLMUnregisterFlightLoopCallback(sendUfmcExtendedFmsCallback, NULL);
 
     XPLMUnregisterFlightLoopCallback(checkX737Callback, NULL);
+    XPLMUnregisterFlightLoopCallback(checkZibo737Callback, NULL);
     XPLMUnregisterFlightLoopCallback(checkCL30Callback, NULL);
     XPLMUnregisterFlightLoopCallback(checkPilotEdgeCallback, NULL);
     XPLMUnregisterFlightLoopCallback(checkQpacCallback, NULL);
@@ -397,6 +425,9 @@ PLUGIN_API void XPluginDisable(void) {
     XPLMUnregisterFlightLoopCallback(sendXfmcCallback, NULL);
     XPLMUnregisterFlightLoopCallback(sendQpacMsgCallback, NULL);
     XPLMUnregisterFlightLoopCallback(sendJar_a320MsgCallback, NULL);
+    XPLMUnregisterFlightLoopCallback(sendZibo737MsgCallback, NULL);
+    XPLMUnregisterFlightLoopCallback(sendZibo737ExtendedFmsCallback, NULL);
+    XPLMUnregisterFlightLoopCallback(sendXP11CduMsgCallback, NULL);
 
     XPLMUnregisterFlightLoopCallback(computeChronoCallback, NULL);
 
